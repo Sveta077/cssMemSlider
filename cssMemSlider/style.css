@@ -1,0 +1,119 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  background:rgb(156, 156, 153);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.slider {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 2em;
+  text-align: center;
+  border-radius: 2em;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.mem:nth-of-type(even) {
+  background-color: rgb(250, 246, 212);
+}
+
+.mem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 57%;
+  scroll-snap-align: center;
+  margin-right: 0;
+  box-sizing: border-box;
+  background: white;
+  transform-origin: center center;
+  transform: scale(1);
+}
+
+.mem__text {
+  font-size: 10em;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: rgb(156, 156, 153);
+}
+
+.mem a {
+  background: none;
+  border: none;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  z-index: 1;
+  background: none;
+  pointer-events: none;
+}
+
+.slider__nav {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 20%;
+  text-align: right;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1.1rem;
+    width: 1.1rem;
+    margin: 0 0.2em;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.dot:hover {
+    background-color: #717171;
+}
+
+.dot:active {
+    background-color: white;
+}
+
+.dot:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.3em white;
+  }
+
+.images {
+    height: 25em;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+  .slider__nav {
+    width: 15%;
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 34rem;
+  }
+}
+
