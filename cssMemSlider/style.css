@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   margin: 0px;
 }
@@ -104,9 +103,15 @@ body {
     box-shadow: 0 0 0 3px white;
   }
 
-.image {
+.images {
     height: 400px;
     width: 600px;
 }
 
+.descriptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
 
